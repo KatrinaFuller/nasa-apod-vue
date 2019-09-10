@@ -30,12 +30,12 @@ export default {
       query: ""
     };
   },
-  computed: {
+  computed: {},
+  methods: {
     getApod() {
       this.$store.dispatch("getApod", this.query);
     }
   },
-  methods: {},
   components: {}
 };
 </script>
