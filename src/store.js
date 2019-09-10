@@ -10,12 +10,19 @@ let api = axios.create({
 
 export default new Vuex.Store({
   state: {
-    pictures: {}
+    apod: {}
   },
   mutations: {
 
   },
   actions: {
-
+    async getApod({ commit, dispatch }, query) {
+      try {
+        let res = await api.get(query)
+        commit('setApod', res.data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
   }
 })
