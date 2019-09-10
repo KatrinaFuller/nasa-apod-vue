@@ -2,12 +2,7 @@
   <div class="search col-12">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <button
-          class="btn btn-outline-warning"
-          type="button"
-          id="button-addon1"
-          @click="getApod()"
-        >Search</button>
+        <button class="btn btn" type="button" id="button-addon1" @click="getApod()">Search</button>
       </div>
       <input
         type="text"
@@ -42,4 +37,7 @@ export default {
 
 
 <style scoped>
+.btn {
+  background-color: #008080;
+}
 </style>
