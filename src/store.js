@@ -13,7 +13,9 @@ export default new Vuex.Store({
     apod: {}
   },
   mutations: {
-
+    setApod(state, apod) {
+      state.apod = apod
+    }
   },
   actions: {
     async getApod({ commit, dispatch }, query) {
